@@ -4,7 +4,7 @@
 
 import Foundation
 import Shared
-import DissenterShared
+import TheHiveShared
 import SwiftKeychainWrapper
 import Data
 
@@ -37,7 +37,7 @@ fileprivate extension Preferences {
         // Grab the user defaults that Prefs saves too and the key prefix all objects inside it are saved under
         let userDefaults = UserDefaults(suiteName: AppInfo.sharedContainerIdentifier)
         
-        /// Wrapper around DissenterShared migrate, to automate prefix injection
+        /// Wrapper around TheHiveShared migrate, to automate prefix injection
         func migrate<T>(key: String, to option: Preferences.Option<T>, transform: ((T) -> T)? = nil) {
             self.migrate(keyPrefix: keyPrefix, key: key, to: option, transform: transform)
         }
@@ -91,19 +91,19 @@ fileprivate extension Preferences {
         }
         
         // Shields
-        migrate(key: "dissenterBlockAdsAndTracking", to: Preferences.Shields.blockAdsAndTracking)
-        migrate(key: "dissenterHttpsEverywhere", to: Preferences.Shields.httpsEverywhere)
-        migrate(key: "dissenterSafeBrowsing", to: Preferences.Shields.blockPhishingAndMalware)
+        migrate(key: "thehiveBlockAdsAndTracking", to: Preferences.Shields.blockAdsAndTracking)
+        migrate(key: "thehiveHttpsEverywhere", to: Preferences.Shields.httpsEverywhere)
+        migrate(key: "thehiveSafeBrowsing", to: Preferences.Shields.blockPhishingAndMalware)
         migrate(key: "noscript_on", to: Preferences.Shields.blockScripts)
         migrate(key: "fingerprintprotection_on", to: Preferences.Shields.fingerprintingProtection)
-        migrate(key: "dissenterAdblockUseRegional", to: Preferences.Shields.useRegionAdBlock)
+        migrate(key: "thehiveAdblockUseRegional", to: Preferences.Shields.useRegionAdBlock)
         
         // Popups
         migrate(key: "popupForDDG", to: Preferences.Popups.duckDuckGoPrivateSearch)
         migrate(key: "popupForBrowserLock", to: Preferences.Popups.browserLock)
         
-        // DissenterShared
-        migrateDissenterShared(keyPrefix: keyPrefix)
+        // TheHiveShared
+        migrateTheHiveShared(keyPrefix: keyPrefix)
         
         // Core Data
         

@@ -6,7 +6,7 @@ import Foundation
 import WebKit
 import Shared
 import Data
-import DissenterShared
+import TheHiveShared
 
 private let log = Logger.browserLogger
 
@@ -232,7 +232,7 @@ extension BrowserViewController: WKNavigationDelegate {
         if let url = responseURL, let urlHost = responseURL?.normalizedHost {
             // If an upgraded https load happens with a host which was upgraded, increase the stats
             if url.scheme == "https", let _ = pendingHTTPUpgrades.removeValue(forKey: urlHost) {
-                DissenterGlobalShieldStats.shared.httpse += 1
+                TheHiveGlobalShieldStats.shared.httpse += 1
                 if let stats = self.tabManager[webView]?.contentBlocker.stats {
                     self.tabManager[webView]?.contentBlocker.stats = stats.create(byAddingListItem: .https)
                 }

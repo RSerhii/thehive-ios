@@ -6,7 +6,7 @@ import Foundation
 import WebKit
 import Storage
 import Shared
-import DissenterShared
+import TheHiveShared
 import SwiftyJSON
 import XCGLogger
 import Data
@@ -70,7 +70,7 @@ class Tab: NSObject {
 
     var userActivity: NSUserActivity?
 
-    var webView: DissenterWebView?
+    var webView: TheHiveWebView?
     var tabDelegate: TabDelegate?
     weak var urlDidChangeDelegate: URLChangeDelegate?     // TODO: generalize this.
     var bars = [SnackBar]()
@@ -475,7 +475,7 @@ class Tab: NSObject {
     }
 
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey: Any]?, context: UnsafeMutableRawPointer?) {
-        guard let webView = object as? DissenterWebView, webView == self.webView,
+        guard let webView = object as? TheHiveWebView, webView == self.webView,
             let path = keyPath, path == KVOConstants.URL.rawValue else {
             return assertionFailure("Unhandled KVO key: \(keyPath ?? "nil")")
         }
@@ -566,7 +566,7 @@ private protocol TabWebViewDelegate: class {
     func tabWebView(_ tabWebView: TabWebView, didSelectFindInPageForSelection selection: String)
 }
 
-class TabWebView: DissenterWebView, MenuHelperInterface {
+class TabWebView: TheHiveWebView, MenuHelperInterface {
     fileprivate weak var delegate: TabWebViewDelegate?
 
     override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {

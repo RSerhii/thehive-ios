@@ -2,7 +2,7 @@
 
 import UIKit
 import Shared
-import DissenterShared
+import TheHiveShared
 import Data
 
 private let log = Logger.browserLogger
@@ -17,7 +17,7 @@ class SyncPairWordsViewController: SyncViewController {
     lazy var wordCountLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 13, weight: UIFont.Weight.regular)
-        label.textColor = DissenterUX.GreyE
+        label.textColor = TheHiveUX.GreyE
         label.text = String(format: Strings.WordCount, 0)
         return label
     }()
@@ -32,7 +32,7 @@ class SyncPairWordsViewController: SyncViewController {
     let useCameraButton = UIButton().then {
         $0.setTitle(Strings.SyncSwitchBackToCameraButton, for: .normal)
         $0.addTarget(self, action: #selector(useCameraButtonTapped), for: .touchDown)
-        $0.setTitleColor(DissenterUX.GreyH, for: .normal)
+        $0.setTitleColor(TheHiveUX.GreyH, for: .normal)
         $0.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.regular)
     }
     

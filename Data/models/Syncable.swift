@@ -5,7 +5,7 @@ import Shared
 import CoreData
 import SwiftyJSON
 
-private let log = Logger.dissenterSyncLogger
+private let log = Logger.thehiveSyncLogger
 
 protocol Syncable: class /* where Self: NSManagedObject */ {
     // Used to enforce CD conformity

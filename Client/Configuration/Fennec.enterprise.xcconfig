@@ -4,7 +4,7 @@
 
 #include "Base.xcconfig"
 
-MOZ_BUNDLE_DISPLAY_NAME = DissenterNight
+MOZ_BUNDLE_DISPLAY_NAME = TheHiveNight
 
 // Bundle Identifier
 MOZ_BUNDLE_ID = $(BASE_BUNDLE_ID).BrowserEnterprise

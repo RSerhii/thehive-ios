@@ -79,7 +79,7 @@ MozBuildID.xcconfig
 # Node.js
 node_modules
 
-# Dissenter
+# TheHive
 scripts/
 BuildId.xcconfig
 

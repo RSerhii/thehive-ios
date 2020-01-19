@@ -2,36 +2,36 @@
  [
   "username", 
   [
-   "DissenterStrings.swift",
-   "DissenterStrings.swift"
+   "TheHiveStrings.swift",
+   "TheHiveStrings.swift"
   ]
  ], 
  [
   "enter passcode", 
   [
-   "DissenterStrings.swift",
-   "DissenterStrings.swift"
+   "TheHiveStrings.swift",
+   "TheHiveStrings.swift"
   ]
  ], 
  [
   "search", 
   [
-   "DissenterStrings.swift",
-   "DissenterStrings.swift"
+   "TheHiveStrings.swift",
+   "TheHiveStrings.swift"
   ]
  ], 
  [
   "find in page", 
   [
-   "DissenterStrings.swift",
-   "DissenterStrings.swift"
+   "TheHiveStrings.swift",
+   "TheHiveStrings.swift"
   ]
  ], 
  [
   "ok", 
   [
-   "DissenterStrings.swift",
-   "DissenterStrings.swift",
+   "TheHiveStrings.swift",
+   "TheHiveStrings.swift",
    "Strings.swift",
    "Strings.swift",
    "Strings.swift",
@@ -42,34 +42,34 @@
   "close", 
   [
    "Strings.swift",
-   "DissenterStrings.swift"
+   "TheHiveStrings.swift"
   ]
  ], 
  [
   "no", 
   [
-   "DissenterStrings.swift",
-   "DissenterStrings.swift"
+   "TheHiveStrings.swift",
+   "TheHiveStrings.swift"
   ]
  ], 
  [
   "edit", 
   [
    "Strings.swift",
-   "DissenterStrings.swift"
+   "TheHiveStrings.swift"
   ]
  ], 
  [
   "close tab", 
   [
    "Strings.swift",
-   "DissenterStrings.swift"
+   "TheHiveStrings.swift"
   ]
  ], 
  [
   "yesterday", 
   [
-   "DissenterStrings.swift",
+   "TheHiveStrings.swift",
    "TimeConstants.swift"
   ]
  ], 
@@ -84,7 +84,7 @@
   "forward", 
   [
    "Strings.swift",
-   "DissenterStrings.swift"
+   "TheHiveStrings.swift"
   ]
  ], 
  [
@@ -97,8 +97,8 @@
  [
   "done", 
   [
-   "DissenterStrings.swift",
-   "DissenterStrings.swift",
+   "TheHiveStrings.swift",
+   "TheHiveStrings.swift",
    "Strings.swift"
   ]
  ], 
@@ -106,24 +106,24 @@
   "back", 
   [
    "Strings.swift",
-   "DissenterStrings.swift"
+   "TheHiveStrings.swift"
   ]
  ], 
  [
   "add tab", 
   [
-   "DissenterStrings.swift",
-   "DissenterStrings.swift"
+   "TheHiveStrings.swift",
+   "TheHiveStrings.swift"
   ]
  ], 
  [
   "cancel", 
   [
-   "DissenterStrings.swift",
-   "DissenterStrings.swift",
-   "DissenterStrings.swift",
-   "DissenterStrings.swift",
-   "DissenterStrings.swift",
+   "TheHiveStrings.swift",
+   "TheHiveStrings.swift",
+   "TheHiveStrings.swift",
+   "TheHiveStrings.swift",
+   "TheHiveStrings.swift",
    "Strings.swift",
    "Strings.swift",
    "Strings.swift"
@@ -132,23 +132,23 @@
  [
   "new tab", 
   [
-   "DissenterStrings.swift",
-   "DissenterStrings.swift",
+   "TheHiveStrings.swift",
+   "TheHiveStrings.swift",
    "Strings.swift"
   ]
  ], 
  [
   "password", 
   [
-   "DissenterStrings.swift",
-   "DissenterStrings.swift"
+   "TheHiveStrings.swift",
+   "TheHiveStrings.swift"
   ]
  ], 
  [
   "delete", 
   [
-   "DissenterStrings.swift",
-   "DissenterStrings.swift"
+   "TheHiveStrings.swift",
+   "TheHiveStrings.swift"
   ]
  ]
 ]

@@ -1,6 +1,6 @@
-# Dissenter for iOS
+# TheHive for iOS
 
-Welcome to the free speech internet. Dissenter for iOS is a fork of [Brave for iOS](https://github.com/brave/brave-ios), so it's fast and it blocks ads and 3rd-party trackers.
+Welcome to the free speech internet. TheHive for iOS is a fork of [Brave for iOS](https://github.com/brave/brave-ios), so it's fast and it blocks ads and 3rd-party trackers.
 
 
 # Build Instructions
@@ -10,7 +10,7 @@ We may create our own version of this, but for now you can see the Brave iOS bui
 
 # Downloads
 
-You can visit https://dissenter.com to find Dissenter for your operating system.
+You can visit https://thehive.com to find TheHive for your operating system.
 
 
 # Community

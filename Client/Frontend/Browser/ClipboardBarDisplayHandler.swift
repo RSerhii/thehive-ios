@@ -4,7 +4,7 @@
 
 import Foundation
 import Shared
-import DissenterShared
+import TheHiveShared
 
 public struct ClipboardBarToastUX {
     static let ToastDelay = DispatchTimeInterval.milliseconds(4000)

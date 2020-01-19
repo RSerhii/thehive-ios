@@ -3,13 +3,13 @@
 import UIKit
 import WebKit
 import Shared
-import DissenterShared
+import TheHiveShared
 import CoreData
 import SwiftKeychainWrapper
 import SwiftyJSON
 import JavaScriptCore
 
-private let log = Logger.dissenterSyncLogger
+private let log = Logger.thehiveSyncLogger
 
 /*
  module.exports.categories = {
@@ -107,7 +107,7 @@ public class Sync: JSInjector {
     fileprivate lazy var isDebug: Bool = { return AppConstants.BuildChannel == .developer }()
     
     fileprivate lazy var serverUrl: String = {
-        return isDebug ? "https://sync-staging.dissenter.com" : "https://sync.dissenter.com"
+        return isDebug ? "https://sync-staging.thehive.com" : "https://sync.thehive.com"
     }()
     
     fileprivate let apiVersion = 0

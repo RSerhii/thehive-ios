@@ -4,7 +4,7 @@
 
 import Shared
 import SnapKit
-import DissenterShared
+import TheHiveShared
 import Data
 
 private struct URLBarViewUX {
@@ -39,7 +39,7 @@ protocol URLBarDelegate: class {
     // Returns either (search query, true) or (url, false).
     func urlBarDisplayTextForURL(_ url: URL?) -> (String?, Bool)
     func urlBarDidBeginDragInteraction(_ urlBar: URLBarView)
-//    func urlBarDidTapDissenterShieldsButton(_ urlBar: URLBarView)
+//    func urlBarDidTapTheHiveShieldsButton(_ urlBar: URLBarView)
     func urlBarDidTapMenuButton(_ urlBar: URLBarView)
     func urlBarDidLongPressReloadButton(_ urlBar: URLBarView, from button: UIButton)
 }
@@ -102,7 +102,7 @@ class URLBarView: UIView {
     fileprivate lazy var cancelButton: UIButton = {
         let cancelButton = InsetButton()
         cancelButton.setTitle(Strings.CancelButtonTitle, for: .normal)
-        cancelButton.setTitleColor(DissenterUX.CancelTextColor, for: .normal)
+        cancelButton.setTitleColor(TheHiveUX.CancelTextColor, for: .normal)
         cancelButton.accessibilityIdentifier = "urlBar-cancel"
         cancelButton.addTarget(self, action: #selector(didClickCancel), for: .touchUpInside)
         cancelButton.setContentCompressionResistancePriority(.required, for: .horizontal)
@@ -536,8 +536,8 @@ class URLBarView: UIView {
         delegate?.urlBarDidTapMenuButton(self)
     }
     
-//    @objc func didClickDissenterShieldsButton() {
-//        delegate?.urlBarDidTapDissenterShieldsButton(self)
+//    @objc func didClickTheHiveShieldsButton() {
+//        delegate?.urlBarDidTapTheHiveShieldsButton(self)
 //    }
 }
 
@@ -677,9 +677,9 @@ extension URLBarView: Themeable {
         showQRButtonTintColor = UIColor.Browser.Tint.colorFor(theme)
         switch theme {
         case .regular:
-            backgroundColor = DissenterUX.ToolbarsBackgroundSolidColor
+            backgroundColor = TheHiveUX.ToolbarsBackgroundSolidColor
         case .private:
-            backgroundColor = DissenterUX.DarkToolbarsBackgroundSolidColor
+            backgroundColor = TheHiveUX.DarkToolbarsBackgroundSolidColor
         }
         line.backgroundColor = UIColor.Browser.URLBarDivider.colorFor(theme)
     }
@@ -773,9 +773,9 @@ extension ToolbarTextField: Themeable {
     func applyTheme(_ theme: Theme) {
         switch theme {
         case .regular:
-            backgroundColor = DissenterUX.LocationBarBackgroundColor
+            backgroundColor = TheHiveUX.LocationBarBackgroundColor
         case .private:
-            backgroundColor = DissenterUX.LocationBarBackgroundColor_PrivateMode
+            backgroundColor = TheHiveUX.LocationBarBackgroundColor_PrivateMode
         }
 
         textColor = UIColor.TextField.TextAndTint.colorFor(theme)

@@ -6,7 +6,7 @@ import Foundation
 import XCTest
 @testable import Client
 @testable import Data
-import DissenterShared
+import TheHiveShared
 import WebKit
 
 class FingerprintProtectionTest: XCTestCase {

@@ -39,10 +39,10 @@ open class AppInfo {
     /// http requests. It is the base bundle identifier with a "group." prefix.
     public static var sharedContainerIdentifier: String {
         var bundleIdentifier = baseBundleIdentifier
-        if bundleIdentifier == "com.dissenter.ios.FennecEnterprise" {
+        if bundleIdentifier == "com.thehive.ios.FennecEnterprise" {
             // Bug 1373726 - Base bundle identifier incorrectly generated for Nightly builds
             // This can be removed when we are able to fix the app group in the developer portal
-            bundleIdentifier = "com.dissenter.ios.Fennec.enterprise"
+            bundleIdentifier = "com.thehive.ios.Fennec.enterprise"
         }
         return "group." + bundleIdentifier
     }
@@ -50,10 +50,10 @@ open class AppInfo {
     /// Return the keychain access group.
     public static func keychainAccessGroupWithPrefix(_ prefix: String) -> String {
         var bundleIdentifier = baseBundleIdentifier
-        if bundleIdentifier == "com.dissenter.ios.FennecEnterprise" {
+        if bundleIdentifier == "com.thehive.ios.FennecEnterprise" {
             // Bug 1373726 - Base bundle identifier incorrectly generated for Nightly builds
             // This can be removed when we are able to fix the app group in the developer portal
-            bundleIdentifier = "com.dissenter.ios.Fennec.enterprise"
+            bundleIdentifier = "com.thehive.ios.Fennec.enterprise"
         }
         return prefix + "." + bundleIdentifier
     }

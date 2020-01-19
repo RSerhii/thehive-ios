@@ -4,7 +4,7 @@
 
 import XCTest
 @testable import Data
-import DissenterShared
+import TheHiveShared
 import JavaScriptCore
 
 class SyncCryptoTests: CoreDataTestCase {

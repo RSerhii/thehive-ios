@@ -4,7 +4,7 @@
 
 import UIKit
 import Shared
-import DissenterShared
+import TheHiveShared
 
 enum PopupViewDismissType: Int {
     case dont
@@ -56,11 +56,11 @@ class PopupView: UIView, UIGestureRecognizerDelegate {
         var color: UIColor {
             switch self {
             case .primary:
-                return DissenterUX.Blue
+                return TheHiveUX.Blue
             case .secondary:
-                return DissenterUX.GreyE
+                return TheHiveUX.GreyE
             case .destructive:
-                return DissenterUX.Red
+                return TheHiveUX.Red
             }
         }
     }
@@ -126,7 +126,7 @@ class PopupView: UIView, UIGestureRecognizerDelegate {
         
         overlayView = UIView(frame: bounds)
         overlayView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        overlayView.backgroundColor = DissenterUX.GreyJ
+        overlayView.backgroundColor = TheHiveUX.GreyJ
         overlayView.alpha = kPopupBackgroundAlpha
         overlayView.addGestureRecognizer(touchRecognizer)
         addSubview(overlayView)

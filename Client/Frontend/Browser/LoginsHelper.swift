@@ -4,7 +4,7 @@
 
 import Foundation
 import Shared
-import DissenterShared
+import TheHiveShared
 import Storage
 import XCGLogger
 import WebKit

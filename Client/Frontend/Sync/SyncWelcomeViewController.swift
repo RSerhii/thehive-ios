@@ -3,7 +3,7 @@
 import UIKit
 import Shared
 import Data
-import DissenterShared
+import TheHiveShared
 
 /// Sometimes during heavy operations we want to prevent user from navigating back, changing screen etc.
 protocol NavigationPrevention {
@@ -43,8 +43,8 @@ class SyncWelcomeViewController: SyncViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.semibold)
-        label.textColor = DissenterUX.GreyJ
-        label.text = Strings.DissenterSync
+        label.textColor = TheHiveUX.GreyJ
+        label.text = Strings.TheHiveSync
         label.textAlignment = .center
         return label
     }()
@@ -53,11 +53,11 @@ class SyncWelcomeViewController: SyncViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.regular)
-        label.textColor = DissenterUX.GreyH
+        label.textColor = TheHiveUX.GreyH
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.textAlignment = .center
-        label.text = Strings.DissenterSyncWelcome
+        label.text = Strings.TheHiveSyncWelcome
         label.setContentHuggingPriority(UILayoutPriority(rawValue: 250), for: .horizontal)
 
         return label
@@ -76,7 +76,7 @@ class SyncWelcomeViewController: SyncViewController {
         button.setTitle(Strings.ScanSyncCode, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: UIFont.Weight.bold)
         button.setTitleColor(UIColor.white, for: .normal)
-        button.backgroundColor = DissenterUX.DissenterGreen
+        button.backgroundColor = TheHiveUX.TheHiveGreen
         button.addTarget(self, action: #selector(existingUserAction), for: .touchUpInside)
 
         button.snp.makeConstraints { make in
@@ -91,7 +91,7 @@ class SyncWelcomeViewController: SyncViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle(Strings.NewSyncCode, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.semibold)
-        button.setTitleColor(DissenterUX.GreyH, for: .normal)
+        button.setTitleColor(TheHiveUX.GreyH, for: .normal)
         button.addTarget(self, action: #selector(newToSyncAction), for: .touchUpInside)
         return button
     }()

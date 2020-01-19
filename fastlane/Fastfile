@@ -57,13 +57,13 @@ platform :ios do
     )
   end
 
-  desc "Creates a Dissenter Beta Release build for TestFlight."
+  desc "Creates a TheHive Beta Release build for TestFlight."
   lane :beta do |options|
     set_build_number(options)
 
     # TODO: make name dynamic
-    # build_name = "Dissenter#{get_client_version_number}(#{get_build_number})"
-    build_name = "DissenterBeta#{get_client_version_number}"
+    # build_name = "TheHive#{get_client_version_number}(#{get_build_number})"
+    build_name = "TheHiveBeta#{get_client_version_number}"
 
     UI.message "NAME: #{build_name}"
 
@@ -125,12 +125,12 @@ platform :ios do
   # TODO: Attempt action override on same name
   private_lane :get_client_version_number do
     buildIdFile = Xcodeproj::Config.new("#{CONFIG_PATH}/Base.xcconfig")
-    buildId = buildIdFile.attributes['DISSENTER_VERSION']
+    buildId = buildIdFile.attributes['THEHIVE_VERSION']
 
     # Traditionally, would pull version number via:
     # get_version_number(target: "Client")
     # This however does not work since we use xcconfigq variables and Fastlane does not seem to parse
-    #   these very well (e.g. this returns the literal value: "$(DISSENTER_VERSION)")
+    #   these very well (e.g. this returns the literal value: "$(THEHIVE_VERSION)")
   end
 
   private_lane :get_client_build_number do

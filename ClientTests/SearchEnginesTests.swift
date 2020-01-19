@@ -6,12 +6,12 @@
 import Foundation
 import XCTest
 import Shared
-import DissenterShared
+import TheHiveShared
 
 class SearchEnginesTests: XCTestCase {
     
     private let DefaultSearchEngineName = "DuckDuckGo"
-    // BRAVE TODO: This list is not accurate because Dissenter uses many more engines
+    // BRAVE TODO: This list is not accurate because TheHive uses many more engines
     private let ExpectedEngineNames = ["Qwant", "Bing", "DuckDuckGo", "Google", "StartPage"]
     
     override func setUp() {

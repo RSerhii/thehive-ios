@@ -5,7 +5,7 @@
 import Foundation
 import WebKit
 import Shared
-import DissenterShared
+import TheHiveShared
 import Data
 
 private let log = Logger.browserLogger

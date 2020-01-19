@@ -4,7 +4,7 @@
 
 import Foundation
 import Shared
-import DissenterShared
+import TheHiveShared
 
 // A browser color represents the color of UI in both Private browsing mode and normal mode
 struct BrowserColor {
@@ -130,16 +130,16 @@ public struct UIConstants {
     static let ActiveScreenshotQuality: CGFloat = 0.5
   
     // Passcode dot gray
-    static let PasscodeDotColor = DissenterUX.GreyG
+    static let PasscodeDotColor = TheHiveUX.GreyG
   
-    // Dissenter Green
-    static let ControlTintColor = DissenterUX.DissenterGreen
+    // TheHive Green
+    static let ControlTintColor = TheHiveUX.TheHiveGreen
   
     // settings
-    static let TableViewHeaderBackgroundColor = DissenterUX.GreyA
-    static let TableViewHeaderTextColor = DissenterUX.GreyH
-    static let TableViewRowTextColor = DissenterUX.GreyJ
-    static let TableViewDisabledRowTextColor = DissenterUX.GreyE
-    static let TableViewSeparatorColor = DissenterUX.GreyC
+    static let TableViewHeaderBackgroundColor = TheHiveUX.GreyA
+    static let TableViewHeaderTextColor = TheHiveUX.GreyH
+    static let TableViewRowTextColor = TheHiveUX.GreyJ
+    static let TableViewDisabledRowTextColor = TheHiveUX.GreyE
+    static let TableViewSeparatorColor = TheHiveUX.GreyC
     static let TableViewHeaderFooterHeight = CGFloat(44)
 }

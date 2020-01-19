@@ -3,7 +3,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 import Foundation
-import DissenterShared
+import TheHiveShared
 
 enum TabBarVisibility: Int, CaseIterable {
     case never
@@ -33,9 +33,9 @@ extension Preferences {
 // MARK: - User Preferences
 extension Preferences {
     final class General {
-        /// Whether this is the first time user has ever launched Dissenter after intalling. *Should never be set to `true` manually!*
+        /// Whether this is the first time user has ever launched TheHive after intalling. *Should never be set to `true` manually!*
         static let isFirstLaunch = Option<Bool>(key: "general.first-launch", default: true)
-        /// Whether or not to save logins in Dissenter
+        /// Whether or not to save logins in TheHive
         static let saveLogins = Option<Bool>(key: "general.save-logins", default: true)
         /// Whether or not to block popups from websites automaticaly
         static let blockPopups = Option<Bool>(key: "general.block-popups", default: true)

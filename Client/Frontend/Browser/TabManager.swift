@@ -6,7 +6,7 @@ import Foundation
 import WebKit
 import Storage
 import Shared
-import DissenterShared
+import TheHiveShared
 import XCGLogger
 import Data
 import CoreData

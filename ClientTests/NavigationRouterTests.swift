@@ -5,7 +5,7 @@
 import Foundation
 @testable import Client
 import WebKit
-import DissenterShared
+import TheHiveShared
 import XCTest
 
 class NavigationRouterTests: XCTestCase {

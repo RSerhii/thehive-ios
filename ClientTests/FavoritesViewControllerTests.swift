@@ -54,23 +54,23 @@ class FavoritesViewControllerTests: XCTestCase {
 
     func testTopSiteDelegate_ReceivesFullURL() {
         let index = IndexPath(item: 0, section: 0)
-        let HTTPS_DISSENTER_COM = "https://www.dissenter.com"
-        dataSource.bookmarks[index] = createBookmark(HTTPS_DISSENTER_COM)
+        let HTTPS_THEHIVE_COM = "https://www.thehive.com"
+        dataSource.bookmarks[index] = createBookmark(HTTPS_THEHIVE_COM)
 
         vc.collectionView(collectionView, didSelectItemAt: index)
 
-        XCTAssertEqual(delegate.input, HTTPS_DISSENTER_COM, "The Favorites destination is incorrect.")
+        XCTAssertEqual(delegate.input, HTTPS_THEHIVE_COM, "The Favorites destination is incorrect.")
         XCTAssertTrue(delegate.isReturningURL, "Favorites should work for URL's.")
     }
 
     func testTopSiteDelegate_ReceivesURLWithoutScheme() {
         let index = IndexPath(item: 0, section: 0)
-        let DISSENTER_COM = "dissenter.com"
-        dataSource.bookmarks[index] = createBookmark(DISSENTER_COM)
+        let THEHIVE_COM = "thehive.com"
+        dataSource.bookmarks[index] = createBookmark(THEHIVE_COM)
 
         vc.collectionView(collectionView, didSelectItemAt: index)
 
-        XCTAssertEqual(delegate.input, DISSENTER_COM, "The Favorites destination is incorrect.")
+        XCTAssertEqual(delegate.input, THEHIVE_COM, "The Favorites destination is incorrect.")
         XCTAssertTrue(delegate.isReturningURL, "Favorites should work for URL's without a scheme.")
     }
 

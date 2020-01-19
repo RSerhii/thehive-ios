@@ -5,7 +5,7 @@
 import Foundation
 import WebKit
 import Data
-import DissenterShared
+import TheHiveShared
 
 class FingerprintingProtection: TabContentScript {
     fileprivate weak var tab: Tab?
@@ -25,7 +25,7 @@ class FingerprintingProtection: TabContentScript {
     func userContentController(_ userContentController: WKUserContentController, didReceiveScriptMessage message: WKScriptMessage) {
         if let stats = self.tab?.contentBlocker.stats {
             self.tab?.contentBlocker.stats = stats.addingFingerprintingBlock()
-            DissenterGlobalShieldStats.shared.fpProtection += 1
+            TheHiveGlobalShieldStats.shared.fpProtection += 1
         }
     }
 }

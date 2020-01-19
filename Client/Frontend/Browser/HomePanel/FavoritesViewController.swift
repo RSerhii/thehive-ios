@@ -4,7 +4,7 @@
 
 import UIKit
 import Shared
-import DissenterShared
+import TheHiveShared
 import XCGLogger
 import Storage
 import Deferred

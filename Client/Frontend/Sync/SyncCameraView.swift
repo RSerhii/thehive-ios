@@ -2,7 +2,7 @@
 
 import AVFoundation
 import Shared
-import DissenterShared
+import TheHiveShared
 import Data
 
 class SyncCameraView: UIView, AVCaptureMetadataOutputObjectsDelegate {

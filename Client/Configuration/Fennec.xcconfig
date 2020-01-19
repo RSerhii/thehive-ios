@@ -5,7 +5,7 @@
 #include "Base.xcconfig"
 #include "Local.xcconfig"
 
-MOZ_BUNDLE_DISPLAY_NAME = Dissenter ($(USER))
+MOZ_BUNDLE_DISPLAY_NAME = TheHive ($(USER))
 
 // Bundle Identifier
 // MOZ_BUNDLE_ID = set in Local.xconfig

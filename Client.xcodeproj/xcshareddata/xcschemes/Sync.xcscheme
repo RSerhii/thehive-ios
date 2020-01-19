@@ -75,8 +75,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5DE7688B20B3456E00FF5533"
-               BuildableName = "DissenterSharedTests.xctest"
-               BlueprintName = "DissenterSharedTests"
+               BuildableName = "TheHiveSharedTests.xctest"
+               BlueprintName = "TheHiveSharedTests"
                ReferencedContainer = "container:Client.xcodeproj">
             </BuildableReference>
          </TestableReference>

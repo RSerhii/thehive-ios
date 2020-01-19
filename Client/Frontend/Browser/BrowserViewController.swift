@@ -15,7 +15,7 @@ import MobileCoreServices
 import SwiftyJSON
 import Deferred
 import Data
-import DissenterShared
+import TheHiveShared
 import SwiftKeychainWrapper
 
 private let log = Logger.browserLogger
@@ -1631,16 +1631,16 @@ extension BrowserViewController: URLBarDelegate {
         dismissVisibleMenus()
     }
     
-//    func urlBarDidTapDissenterShieldsButton(_ urlBar: URLBarView) {
+//    func urlBarDidTapTheHiveShieldsButton(_ urlBar: URLBarView) {
 //        // BRAVE TODO: Use actual instance
 //        guard let selectedTab = tabManager.selectedTab else { return }
 //        let shields = ShieldsViewController(tab: selectedTab)
 //        shields.shieldsSettingsChanged = { [unowned self] _ in
-//            // Reload this tab. This will also trigger an update of the Dissenter icon in `TabLocationView` if
+//            // Reload this tab. This will also trigger an update of the TheHive icon in `TabLocationView` if
 //            // the setting changed is the global `.AllOff` shield
 //            self.tabManager.selectedTab?.reload()
 //
-//            // In 1.6 we "reload" the whole web view state, dumping caches, etc. (reload():DissenterWebView.swift:495)
+//            // In 1.6 we "reload" the whole web view state, dumping caches, etc. (reload():TheHiveWebView.swift:495)
 //            // BRAVE TODO: Port over proper tab reloading with Shields
 //        }
 //        let popover = PopoverController(contentController: shields, contentSizeBehavior: .preferredContentSize)

@@ -4,7 +4,7 @@
 
 import UIKit
 import Shared
-import DissenterShared
+import TheHiveShared
 import Static
 import SwiftKeychainWrapper
 import LocalAuthentication
@@ -88,7 +88,7 @@ class SettingsViewController: TableViewController, MFMailComposeViewControllerDe
         
         super.init(style: .grouped)
         
-        UITableViewCell.appearance().tintColor = DissenterUX.DissenterGreen
+        UITableViewCell.appearance().tintColor = TheHiveUX.TheHiveGreen
     }
     
     @available(*, unavailable)
@@ -101,7 +101,7 @@ class SettingsViewController: TableViewController, MFMailComposeViewControllerDe
         navigationItem.title = Strings.Settings
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: Strings.Done, style: .done, target: self, action: #selector(tappedDone))
         navigationItem.rightBarButtonItem?.accessibilityIdentifier = "SettingsViewController.navigationItem.rightBarButtonItem"
-        navigationItem.rightBarButtonItem?.tintColor = DissenterUX.DissenterGreen
+        navigationItem.rightBarButtonItem?.tintColor = TheHiveUX.TheHiveGreen
         
         tableView.accessibilityIdentifier = "SettingsViewController.tableView"
         tableView.separatorColor = UIConstants.TableViewSeparatorColor
@@ -246,7 +246,7 @@ class SettingsViewController: TableViewController, MFMailComposeViewControllerDe
     
     private lazy var shieldsSection: Section = {
         var shields = Section(
-            header: .title(Strings.Dissenter_Shield_Defaults),
+            header: .title(Strings.TheHive_Shield_Defaults),
             rows: [
                 BoolRow(title: Strings.Block_Popups, option: Preferences.General.blockPopups),
                 BoolRow(title: Strings.Block_Ads_and_Tracking, option: Preferences.Shields.blockAdsAndTracking),
@@ -348,9 +348,9 @@ class SettingsViewController: TableViewController, MFMailComposeViewControllerDe
         return Section(
             header: .title(Strings.Support),
             rows: [
-                Row(text: Strings.Rate_Dissenter,
+                Row(text: Strings.Rate_TheHive,
                     selection: { [unowned self] in
-                        // Rate Dissenter
+                        // Rate TheHive
                         guard let writeReviewURL = URL(string: "https://itunes.apple.com/app/id1463486989?action=write-review")
                             else { return }
                         UIApplication.shared.open(writeReviewURL)
@@ -365,21 +365,21 @@ class SettingsViewController: TableViewController, MFMailComposeViewControllerDe
                 Row(text: Strings.Help,
                     selection: { [unowned self] in
                         // Show help
-                        let help = SettingsContentViewController().then { $0.url = DissenterUX.DissenterSupportURL }
+                        let help = SettingsContentViewController().then { $0.url = TheHiveUX.TheHiveSupportURL }
                         self.navigationController?.pushViewController(help, animated: true)
                     },
                     accessory: .disclosureIndicator, cellClass: MultilineValue1Cell.self),
                 Row(text: Strings.Privacy_Policy,
                     selection: { [unowned self] in
                         // Show privacy policy
-                        let privacy = SettingsContentViewController().then { $0.url = DissenterUX.DissenterPrivacyURL }
+                        let privacy = SettingsContentViewController().then { $0.url = TheHiveUX.TheHivePrivacyURL }
                         self.navigationController?.pushViewController(privacy, animated: true)
                     },
                     accessory: .disclosureIndicator, cellClass: MultilineValue1Cell.self),
                 Row(text: Strings.Terms_of_Use,
                     selection: { [unowned self] in
                         // Show terms of use
-                        let toc = SettingsContentViewController().then { $0.url = DissenterUX.DissenterTermsOfUseURL }
+                        let toc = SettingsContentViewController().then { $0.url = TheHiveUX.TheHiveTermsOfUseURL }
                         self.navigationController?.pushViewController(toc, animated: true)
                     },
                     accessory: .disclosureIndicator, cellClass: MultilineValue1Cell.self)

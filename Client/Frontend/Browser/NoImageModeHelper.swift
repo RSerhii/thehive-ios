@@ -5,7 +5,7 @@
 import Foundation
 import WebKit
 import Shared
-import DissenterShared
+import TheHiveShared
 
 class NoImageModeHelper: TabContentScript {
     fileprivate weak var tab: Tab?

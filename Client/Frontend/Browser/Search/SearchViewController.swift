@@ -5,7 +5,7 @@
 import UIKit
 import Shared
 import Storage
-import DissenterShared
+import TheHiveShared
 
 private enum SearchListSection: Int {
     case searchSuggestions

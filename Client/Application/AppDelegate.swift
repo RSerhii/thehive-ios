@@ -12,7 +12,7 @@ import SwiftKeychainWrapper
 import LocalAuthentication
 import CoreSpotlight
 import UserNotifications
-import DissenterShared
+import TheHiveShared
 import Data
 
 private let log = Logger.browserLogger
@@ -66,8 +66,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIViewControllerRestorati
             // Since passcode is stored in keychain it persists between installations.
             //  If there is no database (either fresh install, or deleted in file system), there is no real reason
             //  to passcode the browser (no data to protect).
-            // Main concern is user installs Dissenter after a long period of time, cannot recall passcode, and can
-            //  literally never use Dissenter. This bypasses this situation, while not using a modifiable pref.
+            // Main concern is user installs TheHive after a long period of time, cannot recall passcode, and can
+            //  literally never use TheHive. This bypasses this situation, while not using a modifiable pref.
             KeychainWrapper.sharedAppContainerKeychain.setAuthenticationInfo(nil)
         }
 
@@ -228,11 +228,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIViewControllerRestorati
         
         AdblockResourceDownloader.shared.regionalAdblockResourcesSetup()
 
-        UINavigationBar.appearance().tintColor = DissenterUX.DissenterGreen
+        UINavigationBar.appearance().tintColor = TheHiveUX.TheHiveGreen
       
         (UISwitch.appearance() as UISwitch).do {
-            $0.tintColor = DissenterUX.SwitchTintColor
-            $0.onTintColor = DissenterUX.DissenterGreen
+            $0.tintColor = TheHiveUX.SwitchTintColor
+            $0.onTintColor = TheHiveUX.TheHiveGreen
         }
       
         return shouldPerformAdditionalDelegateHandling

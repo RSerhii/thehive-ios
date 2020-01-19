@@ -2,7 +2,7 @@
 
 import Foundation
 import Shared
-import DissenterShared
+import TheHiveShared
 import Deferred
 
 private let log = Logger.browserLogger

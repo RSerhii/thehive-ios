@@ -49,14 +49,14 @@ class ImageEntity: NSObject, FICEntity {
 }
 
 enum ImageCacheEntityType: String {
-  case square = "com.dissenter.imageFormatPortrait"
-  case portrait = "com.dissenter.imageFormatSquare"
+  case square = "com.thehive.imageFormatPortrait"
+  case portrait = "com.thehive.imageFormatSquare"
 }
 
 class ImageCache: NSObject, FICImageCacheDelegate {
   static let shared = ImageCache()
   
-  fileprivate let ImageFormatFrameDevice = "com.dissenter.imageFormatFrameDevice"
+  fileprivate let ImageFormatFrameDevice = "com.thehive.imageFormatFrameDevice"
   
   fileprivate var bitmapCache: FICImageCache?
   
@@ -110,7 +110,7 @@ class ImageCache: NSObject, FICImageCacheDelegate {
     imageSquareFormat.devices = UIDevice.current.userInterfaceIdiom == .phone ? .phone : .pad
     imageSquareFormat.protectionMode = .none
     
-    bitmapCache = FICImageCache(nameSpace: "com.dissenter.images")
+    bitmapCache = FICImageCache(nameSpace: "com.thehive.images")
     bitmapCache?.delegate = self
     bitmapCache?.setFormats([imageFormat, imageSquareFormat])
   }

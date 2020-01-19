@@ -6,7 +6,7 @@ import WebKit
 import Shared
 import Data
 import Deferred
-import DissenterShared
+import TheHiveShared
 
 extension ContentBlockerHelper: TabContentScript {
     class func name() -> String {
@@ -43,7 +43,7 @@ extension ContentBlockerHelper: TabContentScript {
         if resourceType == .script && domain.isShieldExpected(.NoScript,
                                                               isPrivateBrowsing: isPrivateBrowsing) {
             self.stats = self.stats.addingScriptBlock()
-            DissenterGlobalShieldStats.shared.scripts += 1
+            TheHiveGlobalShieldStats.shared.scripts += 1
             return
         }
         
@@ -62,9 +62,9 @@ extension ContentBlockerHelper: TabContentScript {
                 }
                 self.stats = self.stats.create(byAddingListItem: listItem)
                 
-                // Increase global stats (here due to BlocklistName being in Client and DissenterGlobalShieldStats being
-                // in DissenterShared)
-                let stats = DissenterGlobalShieldStats.shared
+                // Increase global stats (here due to BlocklistName being in Client and TheHiveGlobalShieldStats being
+                // in TheHiveShared)
+                let stats = TheHiveGlobalShieldStats.shared
                 switch listItem {
                 case .ad: stats.adblock += 1
                 case .https: stats.httpse += 1

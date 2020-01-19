@@ -4,7 +4,7 @@
 
 import Foundation
 import Shared
-import DissenterShared
+import TheHiveShared
 
 // Used by the App to navigate to different views.
 // To open a URL use /open-url or to open a blank tab use /open-url with no params

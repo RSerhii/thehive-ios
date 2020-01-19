@@ -5,7 +5,7 @@
 import UIKit
 import SnapKit
 import Shared
-import DissenterShared
+import TheHiveShared
 
 protocol TabToolbarProtocol: class {
     var tabToolbarDelegate: TabToolbarDelegate? { get set }
@@ -281,9 +281,9 @@ extension TabToolbar: Themeable {
     func applyTheme(_ theme: Theme) {
         switch theme {
         case .regular:
-            backgroundColor = DissenterUX.ToolbarsBackgroundSolidColor
+            backgroundColor = TheHiveUX.ToolbarsBackgroundSolidColor
         case .private:
-            backgroundColor = DissenterUX.DarkToolbarsBackgroundSolidColor
+            backgroundColor = TheHiveUX.DarkToolbarsBackgroundSolidColor
         }
 
         helper?.setTheme(theme: theme, forButtons: actionButtons)

@@ -6,7 +6,7 @@ import Foundation
 import UIKit
 import SnapKit
 import Shared
-import DissenterShared
+import TheHiveShared
 
 protocol TabsBarViewControllerDelegate: class {
     func tabsBarDidSelectTab(_ tabsBarController: TabsBarViewController, _ tab: Tab)
@@ -335,11 +335,11 @@ extension TabsBarViewController: Themeable {
     func applyTheme(_ theme: Theme) {
         switch theme {
         case .regular:
-            view.backgroundColor = DissenterUX.GreyB
-            plusButton.tintColor = DissenterUX.GreyI
+            view.backgroundColor = TheHiveUX.GreyB
+            plusButton.tintColor = TheHiveUX.GreyI
             bottomLine.backgroundColor = UIColor(white: 0.0, alpha: 0.2)
         case .private:
-            view.backgroundColor = DissenterUX.Black
+            view.backgroundColor = TheHiveUX.Black
             plusButton.tintColor = UIColor.white
             bottomLine.backgroundColor = UIColor(white: 1.0, alpha: 0.2)
         }

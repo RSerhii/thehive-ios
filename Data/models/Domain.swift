@@ -3,7 +3,7 @@
 import UIKit
 import CoreData
 import Foundation
-import DissenterShared
+import TheHiveShared
 
 public final class Domain: NSManagedObject, CRUD {
     
@@ -36,13 +36,13 @@ public final class Domain: NSManagedObject, CRUD {
         PrivateBrowsingShieldOverride.privateModeOverrides.removeAll()
     }
     
-    public class func setDissenterShield(forUrl url: URL, shield: DissenterShield,
+    public class func setTheHiveShield(forUrl url: URL, shield: TheHiveShield,
                                      isOn: Bool?, isPrivateBrowsing: Bool) {
-        setDissenterShieldInternal(forUrl: url, shield: shield, isOn: isOn, isPrivateBrowsing: isPrivateBrowsing)
+        setTheHiveShieldInternal(forUrl: url, shield: shield, isOn: isOn, isPrivateBrowsing: isPrivateBrowsing)
     }
     
     /// Whether or not a given shield should be enabled based on domain exceptions and the users global preference
-    public func isShieldExpected(_ shield: DissenterShield, isPrivateBrowsing: Bool) -> Bool {
+    public func isShieldExpected(_ shield: TheHiveShield, isPrivateBrowsing: Bool) -> Bool {
         // If we're private browsing we may have private only overrides that the user made during their private
         // session
         if isPrivateBrowsing, let key = url,
@@ -166,16 +166,16 @@ extension Domain {
     
     // MARK: Shields
     
-    class func getDissenterShield(forUrl url: URL, shield: DissenterShield, isPrivateBrowsing: Bool,
+    class func getTheHiveShield(forUrl url: URL, shield: TheHiveShield, isPrivateBrowsing: Bool,
                               context: NSManagedObjectContext? = nil) -> Bool? {
         if isPrivateBrowsing {
             return getPrivateShieldForDomainUrl(url.domainURL.absoluteString, shield: shield)
         }
         let domain = Domain.getOrCreateInternal(url)
-        return domain.getDissenterShield(shield)
+        return domain.getTheHiveShield(shield)
     }
     
-    class func setDissenterShieldInternal(forUrl url: URL, shield: DissenterShield, isOn: Bool?, isPrivateBrowsing: Bool, context: WriteContext = .new) {
+    class func setTheHiveShieldInternal(forUrl url: URL, shield: TheHiveShield, isOn: Bool?, isPrivateBrowsing: Bool, context: WriteContext = .new) {
         
         DataController.perform(context: context) { context in
             if isPrivateBrowsing {
@@ -184,11 +184,11 @@ extension Domain {
                 return
             }
             let domain = Domain.getOrCreateInternal(url, context: context)
-            domain.setDissenterShield(shield: shield, isOn: isOn, context: context, isPrivateBrowsing: isPrivateBrowsing)
+            domain.setTheHiveShield(shield: shield, isOn: isOn, context: context, isPrivateBrowsing: isPrivateBrowsing)
         }
     }
     
-    private func setDissenterShield(shield: DissenterShield, isOn: Bool?,
+    private func setTheHiveShield(shield: TheHiveShield, isOn: Bool?,
                                 context: NSManagedObjectContext, isPrivateBrowsing: Bool) {
         if isPrivateBrowsing {
             assertionFailure("Domain objects should not be modified while in private mode")
@@ -207,7 +207,7 @@ extension Domain {
     }
     
     /// Get whether or not a shield override is set for a given shield.
-    private func getDissenterShield(_ shield: DissenterShield) -> Bool? {
+    private func getTheHiveShield(_ shield: TheHiveShield) -> Bool? {
         switch shield {
         case .AllOff:
             return self.shield_allOff?.boolValue
@@ -225,11 +225,11 @@ extension Domain {
     }
     
     /// Set the private shield based on `domainURL`
-    private class func setPrivateShieldForDomainUrl(_ domainURL: String, shield: DissenterShield, isOn: Bool?,
+    private class func setPrivateShieldForDomainUrl(_ domainURL: String, shield: TheHiveShield, isOn: Bool?,
                                                     isPrivateBrowsing: Bool, context: NSManagedObjectContext) {
         guard let url = URL(string: domainURL) else { return }
         // Remove private mode override if its set to the same value as the Domain's override
-        let shieldForUrl = getDissenterShield(forUrl: url, shield: shield, isPrivateBrowsing: isPrivateBrowsing,
+        let shieldForUrl = getTheHiveShield(forUrl: url, shield: shield, isPrivateBrowsing: isPrivateBrowsing,
                                           context: context)
         let setting = (isOn == shieldForUrl ? nil : isOn)
         if let on = setting {
@@ -247,12 +247,12 @@ extension Domain {
     ///
     /// Assuming no private mode overrides are found, checks if the Domain object exists for this given URL
     /// If it does, use the Domain's shield value, otherwise defualt to the global preference
-    private class func getPrivateShieldForDomainUrl(_ domainURL: String, shield: DissenterShield) -> Bool? {
+    private class func getPrivateShieldForDomainUrl(_ domainURL: String, shield: TheHiveShield) -> Bool? {
         if let privateModeOverride = PrivateBrowsingShieldOverride.privateModeOverrides[domainURL]?[shield] {
             return privateModeOverride
         }
         if let url = URL(string: domainURL), let domain = Domain.getForUrl(url) {
-            return domain.getDissenterShield(shield)
+            return domain.getTheHiveShield(shield)
         }
         return shield.globalPreference
     }
