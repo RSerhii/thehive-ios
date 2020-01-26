@@ -2413,7 +2413,7 @@
 				0A43292B21B1C6DD0041625B /* hashFn.cpp */,
 			);
 			name = "bloom-filter-cpp";
-			path = "node_modules/bloom-filter-cpp";
+			path = "node_modules/ad-block/node_modules/bloom-filter-cpp";
 			sourceTree = SOURCE_ROOT;
 		};
 		0A43210321B1C5840041625B /* hashset-cpp */ = {
