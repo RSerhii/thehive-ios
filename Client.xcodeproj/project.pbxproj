@@ -514,6 +514,7 @@
 		7BEFC6801BFF68C30059C952 /* QuickActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFC67F1BFF68C30059C952 /* QuickActions.swift */; };
 		7BF5A1EA1B41640500EA9DD8 /* SyncQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF5A1E91B41640500EA9DD8 /* SyncQueue.swift */; };
 		848534F423DDF58B00C0B611 /* hashFn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 848534F323DDF58A00C0B611 /* hashFn.cpp */; };
+		848534FF23DE00F500C0B611 /* hashFn.h in Sources */ = {isa = PBXBuildFile; fileRef = 848534F723DE00F400C0B611 /* hashFn.h */; };
 		A134B88A20DA98BB00A581D0 /* ClientPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = A134B88920DA98BB00A581D0 /* ClientPreferences.swift */; };
 		A13AC72520EC12360040D4BB /* Migration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13AC72420EC12360040D4BB /* Migration.swift */; };
 		A1510DA120E409E9008BF1F4 /* URLCacheExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1510DA020E409E9008BF1F4 /* URLCacheExtensions.swift */; };
@@ -1826,6 +1827,7 @@
 		7BF5A1E91B41640500EA9DD8 /* SyncQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncQueue.swift; sourceTree = "<group>"; };
 		848534F123DDF53D00C0B611 /* BloomFilter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = BloomFilter.cpp; path = "node_modules/ad-block/node_modules/bloom-filter-cpp/BloomFilter.cpp"; sourceTree = "<group>"; };
 		848534F323DDF58A00C0B611 /* hashFn.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = hashFn.cpp; path = "node_modules/ad-block/node_modules/bloom-filter-cpp/hashFn.cpp"; sourceTree = "<group>"; };
+		848534F723DE00F400C0B611 /* hashFn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = hashFn.h; path = "node_modules/ad-block/node_modules/bloom-filter-cpp/hashFn.h"; sourceTree = "<group>"; };
 		A134B88920DA98BB00A581D0 /* ClientPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientPreferences.swift; sourceTree = "<group>"; };
 		A13AC72420EC12360040D4BB /* Migration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Migration.swift; sourceTree = "<group>"; };
 		A1510DA020E409E9008BF1F4 /* URLCacheExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLCacheExtensions.swift; sourceTree = "<group>"; };
@@ -3918,6 +3920,7 @@
 		F84B21B51A090F8100AAB793 = {
 			isa = PBXGroup;
 			children = (
+				848534F723DE00F400C0B611 /* hashFn.h */,
 				848534F323DDF58A00C0B611 /* hashFn.cpp */,
 				848534F123DDF53D00C0B611 /* BloomFilter.cpp */,
 				59B6912D21B695A400E9388E /* Storage.strings */,
@@ -5487,6 +5490,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848534FF23DE00F500C0B611 /* hashFn.h in Sources */,
 				848534F423DDF58B00C0B611 /* hashFn.cpp in Sources */,
 				E640E86A1C73A47C00C5F072 /* PasscodeViews.swift in Sources */,
 				0ABA874320E68CF500D2694F /* SessionData.swift in Sources */,
