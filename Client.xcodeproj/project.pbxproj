@@ -2424,7 +2424,7 @@
 				0A43211121B1C5840041625B /* hash_set.cc */,
 			);
 			name = "hashset-cpp";
-			path = "node_modules/hashset-cpp";
+			path = "node_modules/ad-block/node_modules/hashset-cpp";
 			sourceTree = SOURCE_ROOT;
 		};
 		0A43216721B1C5D30041625B /* ad-block */ = {
