@@ -515,6 +515,10 @@
 		7BF5A1EA1B41640500EA9DD8 /* SyncQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF5A1E91B41640500EA9DD8 /* SyncQueue.swift */; };
 		848534F423DDF58B00C0B611 /* hashFn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 848534F323DDF58A00C0B611 /* hashFn.cpp */; };
 		848534FF23DE00F500C0B611 /* hashFn.h in Sources */ = {isa = PBXBuildFile; fileRef = 848534F723DE00F400C0B611 /* hashFn.h */; };
+		8485350A23DE03F200C0B611 /* hash_set.h in Sources */ = {isa = PBXBuildFile; fileRef = 8485350223DE03F100C0B611 /* hash_set.h */; };
+		8485350C23DE04A700C0B611 /* BloomFilter.h in Sources */ = {isa = PBXBuildFile; fileRef = 8485350B23DE04A700C0B611 /* BloomFilter.h */; };
+		8485350F23DE082B00C0B611 /* context_domain.cc in Sources */ = {isa = PBXBuildFile; fileRef = 8485350D23DE082A00C0B611 /* context_domain.cc */; };
+		8485351023DE082B00C0B611 /* context_domain.h in Sources */ = {isa = PBXBuildFile; fileRef = 8485350E23DE082A00C0B611 /* context_domain.h */; };
 		A134B88A20DA98BB00A581D0 /* ClientPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = A134B88920DA98BB00A581D0 /* ClientPreferences.swift */; };
 		A13AC72520EC12360040D4BB /* Migration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13AC72420EC12360040D4BB /* Migration.swift */; };
 		A1510DA120E409E9008BF1F4 /* URLCacheExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1510DA020E409E9008BF1F4 /* URLCacheExtensions.swift */; };
@@ -1828,6 +1832,10 @@
 		848534F123DDF53D00C0B611 /* BloomFilter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = BloomFilter.cpp; path = "node_modules/ad-block/node_modules/bloom-filter-cpp/BloomFilter.cpp"; sourceTree = "<group>"; };
 		848534F323DDF58A00C0B611 /* hashFn.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = hashFn.cpp; path = "node_modules/ad-block/node_modules/bloom-filter-cpp/hashFn.cpp"; sourceTree = "<group>"; };
 		848534F723DE00F400C0B611 /* hashFn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = hashFn.h; path = "node_modules/ad-block/node_modules/bloom-filter-cpp/hashFn.h"; sourceTree = "<group>"; };
+		8485350223DE03F100C0B611 /* hash_set.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = hash_set.h; path = "node_modules/ad-block/node_modules/hashset-cpp/hash_set.h"; sourceTree = "<group>"; };
+		8485350B23DE04A700C0B611 /* BloomFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BloomFilter.h; path = "node_modules/ad-block/node_modules/bloom-filter-cpp/BloomFilter.h"; sourceTree = "<group>"; };
+		8485350D23DE082A00C0B611 /* context_domain.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = context_domain.cc; path = "node_modules/ad-block/context_domain.cc"; sourceTree = "<group>"; };
+		8485350E23DE082A00C0B611 /* context_domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = context_domain.h; path = "node_modules/ad-block/context_domain.h"; sourceTree = "<group>"; };
 		A134B88920DA98BB00A581D0 /* ClientPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientPreferences.swift; sourceTree = "<group>"; };
 		A13AC72420EC12360040D4BB /* Migration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Migration.swift; sourceTree = "<group>"; };
 		A1510DA020E409E9008BF1F4 /* URLCacheExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLCacheExtensions.swift; sourceTree = "<group>"; };
@@ -3920,6 +3928,10 @@
 		F84B21B51A090F8100AAB793 = {
 			isa = PBXGroup;
 			children = (
+				8485350D23DE082A00C0B611 /* context_domain.cc */,
+				8485350E23DE082A00C0B611 /* context_domain.h */,
+				8485350B23DE04A700C0B611 /* BloomFilter.h */,
+				8485350223DE03F100C0B611 /* hash_set.h */,
 				848534F723DE00F400C0B611 /* hashFn.h */,
 				848534F323DDF58A00C0B611 /* hashFn.cpp */,
 				848534F123DDF53D00C0B611 /* BloomFilter.cpp */,
@@ -5490,6 +5502,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8485350F23DE082B00C0B611 /* context_domain.cc in Sources */,
+				8485351023DE082B00C0B611 /* context_domain.h in Sources */,
+				8485350C23DE04A700C0B611 /* BloomFilter.h in Sources */,
+				8485350A23DE03F200C0B611 /* hash_set.h in Sources */,
 				848534FF23DE00F500C0B611 /* hashFn.h in Sources */,
 				848534F423DDF58B00C0B611 /* hashFn.cpp in Sources */,
 				E640E86A1C73A47C00C5F072 /* PasscodeViews.swift in Sources */,
